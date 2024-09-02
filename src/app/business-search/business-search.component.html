@@ -1,0 +1,42 @@
+<div class="d-flex flex-column min-vh-100 bg-dark text-white">
+    <!-- Logo Section -->
+    <div class="text-center">
+        <a href="">
+            <img src="../../assets/wavvy-wallet-logo.png" alt="Wavvy Wallet Logo" class="search-page-logo">
+        </a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container flex-grow-1 d-flex flex-column align-items-center">
+        <!-- Search Form -->
+        <div class="mb-4 w-100" style="max-width: 500px;">
+            <h2 class="text-white text-center wavvy-wallet-title">Wavvy Wallet</h2>
+            <p class="text-center text-muted">Discover AI-Driven Tags and Categories</p>
+            <form (submit)="onSearch()">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter business name" [(ngModel)]="businessName"
+                        name="businessName" required>
+                    <button class="btn btn-primary login-btn" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Display Search Result -->
+        <div *ngIf="searchResult" class="card text-white bg-dark mb-3 w-100" style="max-width: 500px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ searchResult.business_name }}</h5>
+                <p class="card-text"><strong>Tags:</strong> {{ searchResult.tags }}</p>
+                <p class="card-text"><strong>Category:</strong> {{ searchResult.category }}</p>
+                <p class="card-text">
+                    <strong>Sub Category:</strong>
+                    <select [(ngModel)]="searchResult.sub_category" class="form-select bg-dark text-white">
+                        <option *ngFor="let subCategory of subCategories" [value]="subCategory">{{ subCategory }}
+                        </option>
+                    </select>
+                </p>
+                <p class="card-text"><strong>Category Accuracy:</strong> {{ searchResult.category_accuracy }}%</p>
+                <button class="btn btn-success w-100" (click)="onSave()">Confirm Changes</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: #376C50;
+$secondary: #FF0080;
+$modal-fade-transform: scale(.8);
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Nunito', sans-serif;
+}
+
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer {
+    font-family: 'Nunito', sans-serif !important;
+
+    .btn {
+        font-family: 'Nunito', sans-serif !important;
+    }
+
+}
