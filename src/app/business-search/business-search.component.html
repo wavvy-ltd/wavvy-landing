@@ -1,16 +1,13 @@
 <div class="d-flex flex-column min-vh-100 bg-dark text-white">
-    <!-- Logo Section -->
-    <div class="text-center">
-        <a href="">
-            <img src="../../assets/wavvy-wallet-logo.png" alt="Wavvy Wallet Logo" class="search-page-logo">
-        </a>
-    </div>
+    <!-- Navigation Bar -->
+    <app-navigation-bar></app-navigation-bar>
+    <!-- End of Navigation Bar -->
 
     <!-- Main Container -->
     <div class="container flex-grow-1 d-flex flex-column align-items-center">
         <!-- Search Form -->
-        <div class="mb-4 w-100" style="max-width: 500px;">
-            <h2 class="text-white text-center wavvy-wallet-title">Wavvy Wallet</h2>
+        <div class="mb-4 w-100 search-wrapper" style="max-width: 500px;">
+            <h2 class="text-white text-center wavvy-wallet-title">Business Search</h2>
             <p class="text-center text-muted">Discover AI-Driven Tags and Categories</p>
             <form (submit)="onSearch()">
                 <div class="input-group mb-3">

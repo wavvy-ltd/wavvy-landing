@@ -1,0 +1,133 @@
+.bg-green {
+    background-color: #212529;
+    color: white;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.container-fluid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: 768px) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #4caf50;
+    border: none;
+    font-weight: bold;
+}
+
+.display-4 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px) {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.lead {
+    font-size: 1rem;
+    font-weight: 300;
+
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
+    }
+}
+
+.btn-outline-light {
+    color: white;
+    border-color: white;
+}
+
+.wavvy-wallet-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px !important;
+    margin: 5px;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px !important;
+    }
+}
+
+.wavvy-wallet-text {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+
+    @media (min-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+
+.login-btn {
+    background-color: #376C50;
+}
+
+.login-btn:hover {
+    background-color: #314A3E;
+}
+
+.login-btn i {
+    margin-right: 5px;
+
+    @media (min-width: 768px) {
+        margin-right: 8px;
+    }
+}
+
+.login-btn-wrapper {
+    @media (max-width: 768px) {
+        margin-left: 0px !important;
+    }
+}
+
+.play-store-logo {
+    width: 50%;
+    opacity: 0.8;
+    margin-top: 10px;
+
+    @media (min-width: 768px) {
+        width: 30%;
+    }
+}
+
+.wavvy-landing-img {
+    width: 70%;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+
+    @media (min-width: 768px) {
+        width: 46%;
+        margin-top: 0;
+    }
+}

@@ -1,34 +1,7 @@
 <div class="d-flex flex-column min-vh-100">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
-        <div class="container-fluid">
-            <img src="../../assets/wavvy-wallet-logo.png" class="wavvy-wallet-logo" alt="wavvy-wallet-logo">
-            <a class="wavvy-wallet-text" href="#">Wavvy Wallet</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Align navbar items to the right -->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://wavvy.dev/privacy" target="_blank">Privacy Policy</a>
-                    </li>
-                </ul>
-                <!-- Login button aligned to the right -->
-                <a href="/search">
-                    <div class="d-flex ms-3 login-btn-wrapper">
-                        <button class="btn btn-primary login-btn" type="button">
-                            <i class="fas fa-sign-in-alt"></i> Login
-                        </button>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <app-navigation-bar></app-navigation-bar>
+    <!-- End of Navigation Bar -->
 
     <!-- Landing Page Content -->
     <div class="container-fluid flex-grow-1 d-flex align-items-center bg-green">
