@@ -14,18 +14,37 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
+
+                <li class="nav-item" *ngIf="isAuthenticated$ |async">
+                    <a class="nav-link " aria-current="page" href="/search">Search</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="https://wavvy.dev/privacy" target="_blank">Privacy Policy</a>
                 </li>
             </ul>
             <!-- Login button aligned to the right -->
-            <a href="/search">
+            <div *ngIf="isAuthenticated$ |async">
                 <div class="d-flex ms-3 login-btn-wrapper">
-                    <button class="btn btn-primary login-btn" type="button">
-                        <i class="fas fa-sign-in-alt"></i> Login
+                    <button (click)="logout()" class="btn btn-secondary login-btn" type="button">
+                        <i class="fas fa-sign-in-alt"></i> {{(profile$ | async).first_name}} Logout
                     </button>
                 </div>
-            </a>
+
+
+            </div>
+
+            <div *ngIf="! (isAuthenticated$ |async)" class="login-background">
+                <a href="/login">
+                    <div class="d-flex ms-3 login-btn-wrapper">
+                        <button class="btn btn-primary login-btn" type="button">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+
         </div>
     </div>
 </nav>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 import { LoginRoutes } from './login.routing';
+import { NgxsAuthModule } from '@sisitech/ngxs-auth';
 
 
 
@@ -13,6 +14,7 @@ import { LoginRoutes } from './login.routing';
   imports: [
     CommonModule,
     RouterModule.forChild(LoginRoutes),
+    NgxsAuthModule,
   ]
 })
 export class LoginModule { }
