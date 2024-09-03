@@ -2,10 +2,10 @@
 set -e
 IMAGE=michameiu/wavvy-landing
 
-VERSION=v1.0.0
+VERSION=v1.0.1
 echo "Building $IMAGE:$VERSION"
 
-# git push origin main
+git push origin main
 
 npm run build-prod
 
