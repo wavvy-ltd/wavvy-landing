@@ -2,7 +2,7 @@
 set -e
 IMAGE=michameiu/wavvy-landing
 
-VERSION=v1.0.1
+VERSION=v1.0.2
 echo "Building $IMAGE:$VERSION"
 
 git push origin main
