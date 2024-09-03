@@ -13,7 +13,7 @@ export class NavigationBarComponent implements OnInit {
   @Select(AuthState.profile) profile$!: Observable<any>;
 
 
-  constructor(private store: Store,) { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
