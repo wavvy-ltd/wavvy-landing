@@ -23,15 +23,13 @@
                     <a class="nav-link" href="https://wavvy.dev/privacy" target="_blank">Privacy Policy</a>
                 </li>
             </ul>
-            <!-- Login button aligned to the right -->
+
             <div *ngIf="isAuthenticated$ |async">
                 <div class="d-flex ms-3 login-btn-wrapper">
-                    <button (click)="logout()" class="btn btn-secondary login-btn" type="button">
-                        <i class="fas fa-sign-in-alt"></i> {{(profile$ | async).first_name}} Logout
+                    <button (click)="logout()" class="btn login-btn" type="button">
+                        <i class="fas fa-sign-in-alt"></i> Logout
                     </button>
                 </div>
-
-
             </div>
 
             <div *ngIf="! (isAuthenticated$ |async)" class="login-background">

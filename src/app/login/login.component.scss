@@ -55,3 +55,9 @@
 .text-white {
     color: white !important;
 }
+
+::ng-deep .card {
+    background-color: transparent !important;
+    border: none !important;
+    width: 25vw !important;
+}
