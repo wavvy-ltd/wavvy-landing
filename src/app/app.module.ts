@@ -4,11 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsAuthModule } from '@sisitech/ngxs-auth';
+import { environment } from '../environments/environment';
 
 const authConfig = {
-  APIEndpoint: "https://api.expensetracker.wavvy.dev",
-  version: "api/v1",
-  clientId: "fbaPXGrD6wewVEqoOkJfvierIrYbnROPXMa8CDv5",
+  APIEndpoint: environment.APIEndpoint,
+  version: environment.version,
+  clientId: environment.clientId,
 }
 
 @NgModule({
