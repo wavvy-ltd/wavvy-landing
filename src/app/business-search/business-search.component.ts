@@ -88,6 +88,11 @@ export class BusinessSearchComponent implements OnInit {
   }
 
   async onDoSearch(searchBusinessName: string) {
+    if (searchBusinessName == "") {
+      console.log("Nothing to")
+      return;
+    }
+
     this.isLoading = true
     try {
       var url = `api/v1/tagging-rules/suggest-tags`;
