@@ -79,4 +79,15 @@
 ::ng-deep .page-form {
     background-color: transparent !important;
     margin-top: 0px !important;
+    padding: 0px !important;
+}
+
+.search-page-wrapper {
+    padding-top: 1rem;
+}
+
+::ng-deep .result {
+    background-color: transparent !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
 }

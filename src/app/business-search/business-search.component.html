@@ -14,12 +14,11 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="tagrule-tab" data-bs-toggle="tab" data-bs-target="#tagrule"
-                        type="button" role="tab" aria-controls="tagrule" aria-selected="false">TagginRule
+                        type="button" role="tab" aria-controls="tagrule" aria-selected="false">Tagging Rule
                         Search</button>
                 </li>
             </ul>
-            <hr>
-            <div class="tab-content" id="myTabContent">
+            <div class="tab-content search-page-wrapper" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <!-- <h2 class="text-white text-center wavvy-wallet-title">AI Search</h2> -->
                     <p class="text-center text-muted">Discover AI-Driven Tags and Categories</p>
@@ -33,6 +32,7 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="tagrule" role="tabpanel" aria-labelledby="tagrule-tab">
+                    <p class="text-center text-muted">Discover AI-Driven Tags and Categories</p>
                     <app-myform [extraFields]="extra_fields" [formItems]="searchformItems" [url]="url"
                         (onValidatedData)="onValidatedDataSearch($event)" [isValidationOnly]=true
                         submitButtonText="Search" submitButtonPreText=" " [formGroupOrder]="formGroupOrderSearch"

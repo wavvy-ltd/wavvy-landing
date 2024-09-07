@@ -11,7 +11,7 @@ import { searchTaggingOptions } from './searchOptions';
   styleUrls: ['./business-search.component.scss']
 })
 export class BusinessSearchComponent implements OnInit {
-  businessName: string = 'Safaricom data bundles';
+  businessName: string = '';
   searchResult: any = null;
   formItems = businessTaggingOptions;
   searchformItems = searchTaggingOptions;
