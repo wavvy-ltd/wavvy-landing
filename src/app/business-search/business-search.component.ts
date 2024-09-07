@@ -3,6 +3,7 @@ import { businessTaggingOptions } from './options';
 import { MyFormSection } from '@sisitech/myform';
 import { TablesService } from '@sisitech/tables';
 import { firstValueFrom } from 'rxjs';
+import { searchTaggingOptions } from './searchOptions';
 
 @Component({
   selector: 'app-business-search',
@@ -13,6 +14,7 @@ export class BusinessSearchComponent implements OnInit {
   businessName: string = 'Safaricom data bundles';
   searchResult: any = null;
   formItems = businessTaggingOptions;
+  searchformItems = searchTaggingOptions;
   extra_fields: any = { "confidence_score": 100 };
   instance: any;
   originalInstance: any;
@@ -34,6 +36,10 @@ export class BusinessSearchComponent implements OnInit {
 
   formGroupOrder = [
     this.section1
+  ]
+
+  formGroupOrderSearch = [
+    ['name'],
   ]
 
   constructor(private tableServ: TablesService) {
@@ -61,6 +67,14 @@ export class BusinessSearchComponent implements OnInit {
     console.log(this.instance)
   }
 
+  async onValidatedDataSearch(data: any) {
+    console.log(data)
+    await this.onDoSearch(data.name);
+
+
+
+  }
+
   onValidatedData(data: any) {
     console.log(data)
   }
@@ -70,22 +84,16 @@ export class BusinessSearchComponent implements OnInit {
   }
 
   async onSearch() {
-    // Example of a search result returned from a service
-    // this.searchResult = {
-    //   tags: 'chicken, galitos',
-    //   category: 'Food & Dining',
-    //   sub_category: 'Fast Food',
-    //   business_name: 'Galitos',
-    //   category_accuracy: 95
-    // };
-    console.log();
+    await this.onDoSearch(this.businessName);
+  }
 
+  async onDoSearch(searchBusinessName: string) {
     this.isLoading = true
     try {
       var url = `api/v1/tagging-rules/suggest-tags`;
       // var url = `api/v1/tagging-rules`;
-      let args = `name=${this.businessName}`
-      const resp = await firstValueFrom(this.tableServ.getList(url, 10, args));
+      let args = `name=${searchBusinessName}`
+      const resp: any = await firstValueFrom(this.tableServ.getList(url, 10, args));
       if (resp.hasOwnProperty("id")) {
         this.id = resp.id
       }
