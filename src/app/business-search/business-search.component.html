@@ -13,27 +13,21 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Enter business name" [(ngModel)]="businessName"
                         name="businessName" required>
-                    <button class="btn btn-primary login-btn" type="submit">Search</button>
+                    <button [disabled]="isLoading" class="btn btn-primary login-btn" type="submit">
+                        {{isLoading?'Searching...':'Search'}}</button>
                 </div>
             </form>
         </div>
 
-        <!-- Display Search Result -->
-        <div *ngIf="searchResult" class="card text-white bg-dark mb-3 w-100" style="max-width: 500px;">
-            <div class="card-body">
-                <h5 class="card-title">{{ searchResult.business_name }}</h5>
-                <p class="card-text"><strong>Tags:</strong> {{ searchResult.tags }}</p>
-                <p class="card-text"><strong>Category:</strong> {{ searchResult.category }}</p>
-                <p class="card-text">
-                    <strong>Sub Category:</strong>
-                    <select [(ngModel)]="searchResult.sub_category" class="form-select bg-dark text-white">
-                        <option *ngFor="let subCategory of subCategories" [value]="subCategory">{{ subCategory }}
-                        </option>
-                    </select>
-                </p>
-                <p class="card-text"><strong>Category Accuracy:</strong> {{ searchResult.category_accuracy }}%</p>
-                <button class="btn btn-success w-100" (click)="onSave()">Confirm Changes</button>
-            </div>
+        <div *ngIf="id" class="card text-white bg-dark mb-3 w-100">
+            <sistch-tables-single-view (setInstance)="setIntance($event)" instanceUrl="api/v1/tagging-rules" [id]="id">
+
+                <app-myform [extraFields]="extra_fields" [formItems]="formItems" [url]="url"
+                    (onValidatedData)="onValidatedData($event)" [submitButtonText]="'Changes'"
+                    [formGroupOrder]="formGroupOrder" [hideButtons]=false [instance]="instance"
+                    (onPostedData)="onPostedData($event)">
+                </app-myform>
+            </sistch-tables-single-view>
         </div>
     </div>
 </div>

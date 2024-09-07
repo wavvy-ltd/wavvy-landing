@@ -22,9 +22,13 @@
     "@ngxs/storage-plugin": "^3.8.2",
     "@ngxs/store": "^3.8.2",
     "@popperjs/core": "^2.11.8",
+    "@sisitech/myform": "^0.3.1",
     "@sisitech/ngxs-auth": "^0.0.9",
+    "@sisitech/tables": "^0.4.7",
+    "@sisitech/utils": "^0.3.1",
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.1.3",
+    "date-fns": "^2.30.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
