@@ -78,19 +78,5 @@
 
 ::ng-deep .page-form {
     background-color: transparent !important;
+    margin-top: 0px !important;
 }
-
-::ng-deep .animateButton {
-    width: 80vw !important;
-}
-
-// ::ng-deep #name,
-// ::ng-deep #sub_category,
-// ::ng-deep #confidence_score,
-// ::ng-deep #category {
-//     width: 80vw !important;
-
-//     @media (min-width: 768px) {
-//         width: 60vw !important;
-//     }
-// }
