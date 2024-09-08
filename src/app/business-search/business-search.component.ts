@@ -28,9 +28,10 @@ export class BusinessSearchComponent implements OnInit {
     subTitle: "",
     formGroupOrder: [
       ['name'],
+      ['account'],
       ['category'],
       ['sub_category'],
-      ['confidence_score']
+      ['confidence_score'],
     ]
   }
 

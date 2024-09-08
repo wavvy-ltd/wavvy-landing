@@ -46,7 +46,7 @@ const businessTaggingOptions = {
             },
             "account": {
                 "type": "string",
-                "required": true,
+                "required": false,
                 "read_only": false,
                 "label": "Account",
                 "max_length": 100
