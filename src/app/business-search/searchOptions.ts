@@ -36,7 +36,7 @@ const searchTaggingOptions = {
                 "read_only": false,
                 "label": "Business Name",
                 "url": `api/v1/tagging-rules`,
-                "placeholder": "Search Business name...",
+                "placeholder": "Enter Business name...",
                 "search_field": "name",
                 "display_name": "name",
                 "value_field": "name",
