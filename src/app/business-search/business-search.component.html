@@ -13,14 +13,15 @@
             <!-- Tab Navigation -->
             <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item flex-fill" role="presentation">
-                    <button class="nav-link active w-100" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                        type="button" role="tab" aria-controls="home" aria-selected="true">
+                    <button (click)="changeTag()" class="nav-link active w-100" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                         Create Tagging Rule
                     </button>
                 </li>
                 <li class="nav-item flex-fill" role="presentation">
-                    <button class="nav-link w-100" id="tagrule-tab" data-bs-toggle="tab" data-bs-target="#tagrule"
-                        type="button" role="tab" aria-controls="tagrule" aria-selected="false">
+                    <button (click)="changeTag()" class="nav-link w-100" id="tagrule-tab" data-bs-toggle="tab"
+                        data-bs-target="#tagrule" type="button" role="tab" aria-controls="tagrule"
+                        aria-selected="false">
                         Update Tagging Rule
                     </button>
                 </li>
@@ -43,16 +44,15 @@
                     <app-myform [extraFields]="extra_fields" [formItems]="searchformItems" [url]="url"
                         (onValidatedData)="onValidatedDataSearch($event)" [isValidationOnly]=true
                         submitButtonText="Search" submitButtonPreText=" " [formGroupOrder]="formGroupOrderSearch"
-                        [hideButtons]=false [instance]="instance" (onPostedData)="onPostedData($event)"
-                        title="tagruleSearch" name="tagruleSearch"></app-myform>
+                        [hideButtons]=false (onPostedData)="onPostedData($event)" title="tagruleSearch"
+                        name="tagruleSearch"></app-myform>
                 </div>
             </div>
 
         </div>
 
-        <div *ngIf="id && !isLoading" class="card text-white bg-dark mb-3 w-100">
+        <div *ngIf="id !=null && !isLoading" class="card text-white bg-dark mb-3 w-100">
             <sistch-tables-single-view (setInstance)="setIntance($event)" instanceUrl="api/v1/tagging-rules" [id]="id">
-
                 <app-myform [extraFields]="extra_fields" [formItems]="formItems" [url]="url"
                     (onValidatedData)="onValidatedData($event)" [submitButtonText]="'Changes'"
                     [formGroupOrder]="formGroupOrder" [hideButtons]=false [instance]="instance"

@@ -18,7 +18,7 @@ export class BusinessSearchComponent implements OnInit {
   extra_fields: any = { "confidence_score": 100 };
   instance: any;
   originalInstance: any;
-  id: any;
+  id: any = null;
   providedInstance: any;
   url: string = "api/v1/tagging-rules/";
   isLoading = false;
@@ -64,16 +64,11 @@ export class BusinessSearchComponent implements OnInit {
   setIntance(new_instance: any) {
     console.log("Setting instance");
     this.instance = new_instance
-
-    console.log(this.instance)
   }
 
   async onValidatedDataSearch(data: any) {
     console.log(data)
     await this.onDoSearch(data.name);
-
-
-
   }
 
   onValidatedData(data: any) {
@@ -82,6 +77,12 @@ export class BusinessSearchComponent implements OnInit {
 
   onPostedData(data: any) {
     console.log(data)
+  }
+
+  changeTag() {
+    this.id = null;
+    this.instance = null;
+
   }
 
   async onSearch() {
@@ -103,7 +104,7 @@ export class BusinessSearchComponent implements OnInit {
       if (resp.hasOwnProperty("id")) {
         this.id = resp.id
       }
-      // this.id=resp.
+
     } catch (error) {
       console.error("Not found ")
       console.error(error)
