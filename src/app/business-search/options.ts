@@ -35,6 +35,7 @@ const businessTaggingOptions = {
                 "required": true,
                 "read_only": false,
                 "label": "Business Name",
+                "disabled": true,
                 "max_length": 100
             },
             "custom_name": {
