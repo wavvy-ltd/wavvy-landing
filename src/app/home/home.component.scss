@@ -115,9 +115,11 @@
     width: 50%;
     opacity: 0.8;
     margin-top: 10px;
+    cursor: pointer;
 
     @media (min-width: 768px) {
         width: 30%;
+        cursor: pointer;
     }
 }
 
@@ -136,4 +138,9 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 2rem;
+}
+
+a {
+    margin: 0;
+    padding: 0;
 }
